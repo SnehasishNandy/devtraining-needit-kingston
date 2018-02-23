@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="3" type="collection">
         <element label="NewField_1" max_length="1000" name="newfield_1" type="string"/>
         <element label="NewField_2" max_length="40" name="newfield_2" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_other" type="string" use_dependent_field="true"/>
         <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Request For Email" mandatory="true" max_length="40" name="u_request_for_email" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" default="legal" label="Request Type" mandatory="true" max_length="40" name="u_request_type" type="string">
             <choice>
                 <element label="Human Resource" sequence="0" value="hr"/>
@@ -12,7 +14,8 @@
                 <element label="Your Department Choice" sequence="3" value="your department choice"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" choice="1" default="legal1" label="What Needed" max_length="40" name="u_what_needed" type="string">
+        <element attributes="edge_encryption_enabled=true" label="Request For Email" max_length="40" name="u_string_1" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal1" label="What Needed" max_length="40" name="u_what_needed" type="string">
             <choice>
                 <element label="Human Resources 1" sequence="0" value="hr1"/>
                 <element label="Human Resources 2" sequence="1" value="hr2"/>
@@ -22,6 +25,7 @@
                 <element label="Legal 2" sequence="5" value="legal2"/>
                 <element label="Your Department Choice 1" sequence="6" value="your_choice1"/>
                 <element label="Your Department Choice 2" sequence="7" value="your_choice2"/>
+                <element label="Other" sequence="8" value="Other"/>
             </choice>
         </element>
         <element label="When Needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>

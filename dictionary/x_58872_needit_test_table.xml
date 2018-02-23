@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Test_Table" max_length="40" name="x_58872_needit_test_table" type="collection">
+        <element choice="3" label="Choice" max_length="40" name="u_choice" type="choice">
+            <choice>
+                <element label="test1" value="1"/>
+            </choice>
+        </element>
+    </element>
+</database>
